@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import EstatesHero from "@/app/components/EstatesHero";
-import PropertyTour from "@/app/components/PropertyTour";
 import Reveal from "@/app/components/Reveal";
 import { ListingScene, type SceneKey } from "@/app/components/scenes";
 
@@ -105,28 +104,6 @@ export default function HomePage() {
 
       {/* Arrival: macaw flight → bird's-eye hand-off */}
       <EstatesHero />
-
-      {/* Drone aerial tour */}
-      <section id="tour" className="bg-white py-[clamp(64px,9vw,120px)]">
-        <div className="mx-auto max-w-[1240px] px-[clamp(20px,5vw,52px)]">
-          <Reveal className="mb-8 grid grid-cols-1 items-end gap-x-10 gap-y-4 lg:grid-cols-[1fr_320px]">
-            <div>
-              <span className="font-mono text-[12px] uppercase tracking-[0.28em] text-zinc-500">Aerial tour · 01</span>
-              <h2 className="mt-2 text-balance font-display text-[clamp(30px,4.6vw,52px)] leading-tight">
-                The Bird House, from 120&nbsp;metres up.
-              </h2>
-            </div>
-            <p className="text-zinc-500 lg:pb-1.5">
-              The macaws just flew you in. This is the real thing — the land, the roofline, the ocean on the horizon, in one unbroken pass.
-            </p>
-          </Reveal>
-          <Reveal delay={80}><PropertyTour /></Reveal>
-          <p className="mt-4 flex items-center gap-2.5 font-mono text-[12px] text-zinc-500">
-            <span className="inline-block h-[7px] w-[7px] rounded-full bg-[#eaa519]" />
-            Your 30-second drone tour — the macaw flight above lands straight into it.
-          </p>
-        </div>
-      </section>
 
       {/* Featured property */}
       <section id="featured" className="border-y border-zinc-200 bg-stone-50 py-[clamp(72px,10vw,140px)]">
