@@ -12,16 +12,16 @@ const HERO = photos[0];
 // Placeholder figures pending the real listing details.
 const listing = {
   name: "The Bird House",
-  location: "Puriscal · Central Pacific slopes · Ocean & mountain view",
+  location: "Puriscal · Central Pacific · Own water · Ocean & forest",
   status: "Reduced",
   price: "$395,000",
   specs: [
+    { n: "Own water", l: "Spring-fed" },
+    { n: "Fruit trees", l: "At the door" },
     { n: "2 bed", l: "+ 2 bath" },
-    { n: "Glass house", l: "Red steel frame" },
-    { n: "Ocean view", l: "+ mountain ridge" },
+    { n: "Ocean + forest", l: "In every window" },
     { n: "Turnkey", l: "Running Airbnb" },
-    { n: "Puriscal", l: "Central Pacific" },
-    { n: "Jacuzzi", l: "+ hammock terrace" },
+    { n: "1.2 ha", l: "Titled" },
   ],
 };
 
@@ -31,7 +31,7 @@ const schema = [
     "@type": "SingleFamilyResidence",
     name: "The Bird House — glass house with ocean view, Puriscal, Costa Rica",
     description:
-      "A red steel-framed glass house on a ridge in the Puriscal region of Costa Rica, wrapped in windows with ocean and mountain views. Open-plan living, indoor jacuzzi, hammock terraces, and a running Airbnb operation. Sold with guided visits and expat relocation support.",
+      "A private red steel-framed glass house on a ridge in the Puriscal region of Costa Rica — its own spring-fed water, fruit trees at the door, ocean and forest views, along the biological corridors near protected forest. Open-plan living, indoor jacuzzi, hammock terraces, and a running Airbnb. Shown in person, with a free video call and a free on-site visit.",
     numberOfRooms: 2,
     amenityFeature: [
       { "@type": "LocationFeatureSpecification", name: "Ocean view", value: true },
@@ -45,7 +45,7 @@ const schema = [
 export const metadata: Metadata = {
   title: "The Bird House — Glass House with Ocean View, Puriscal",
   description:
-    "A red-framed glass house on a Puriscal ridge with ocean and mountain views, indoor jacuzzi, and a running Airbnb. See the aerial drone tour, browse the gallery, and book a guided visit.",
+    "A private glass house on a Puriscal ridge — its own spring-fed water, fruit trees, ocean and forest views, near protected forest. Indoor jacuzzi, running Airbnb. See the drone tour, browse the gallery, and book a free visit.",
 };
 
 export default function BirdHousePage() {
@@ -74,7 +74,7 @@ export default function BirdHousePage() {
             </div>
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#visit" className="inline-flex items-center gap-2 rounded-full bg-[#e23a2e] px-6 py-3 text-sm font-semibold text-white transition hover:brightness-110">Book a guided visit</a>
+            <a href="#visit" className="inline-flex items-center gap-2 rounded-full bg-[#e23a2e] px-6 py-3 text-sm font-semibold text-white transition hover:brightness-110">Book a free visit</a>
             <a href="#tour" className="inline-flex items-center gap-2 rounded-full border border-white/50 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10">Watch the aerial tour</a>
           </div>
         </div>
@@ -99,9 +99,9 @@ export default function BirdHousePage() {
             <span className="font-mono text-[12px] uppercase tracking-[0.28em] text-zinc-500">The house</span>
             <h2 className="mt-3 max-w-[18ch] text-balance font-display text-[clamp(28px,4.4vw,50px)] leading-[1.05]">A glass house that lives in the canopy.</h2>
             <div className="mt-6 max-w-[62ch] space-y-4 text-lg text-zinc-600">
-              <p>The name fits. It&apos;s a red steel frame filled almost entirely with glass, set high on a Puriscal ridge — so from the inside you&apos;re level with the birds, the ocean on one horizon and mountains on the other. The walls slide away and the forest comes in.</p>
-              <p>Open-plan living under a pitched roof, a spiral stair, a round jacuzzi indoors and a hammock terrace out. Bedrooms that wake up to the view, a kitchen that looks straight out at it. It already runs as an Airbnb, so it comes with the setup and the bookings if you want them — or empty it out and keep the view to yourself.</p>
-              <p>Scroll the aerial tour below to see how it sits on the land, then walk the gallery room by room.</p>
+              <p>The name fits. It&apos;s a red steel frame filled almost entirely with glass, high on a private Puriscal ridge — so from the inside you&apos;re level with the birds, ocean on one horizon and forest on the other. The walls slide open and the outside comes in.</p>
+              <p>It has its own spring-fed water and fruit trees at the door — mango, citrus, banana within reach. Toucans and a hundred other birds move through, because the ridge sits along the corridors that feed the protected forest nearby. Open-plan living, a spiral stair, an indoor jacuzzi, a hammock terrace. It already earns as an Airbnb, so keep hosting — or empty it out and keep the quiet.</p>
+              <p>I&apos;ve walked every metre of it. As an engineer I can tell you exactly what&apos;s here and what&apos;s possible — the water, the access, what a second build would take. Come see it on a free visit, in whatever language suits you.</p>
             </div>
           </Reveal>
           <Reveal delay={100} className="overflow-hidden rounded-2xl border border-zinc-200 shadow-[0_22px_60px_-28px_rgba(24,33,27,.35)]">
@@ -119,7 +119,7 @@ export default function BirdHousePage() {
               <span className="font-mono text-[12px] uppercase tracking-[0.28em] text-zinc-500">Aerial tour</span>
               <h2 className="mt-2 text-balance font-display text-[clamp(28px,4.4vw,50px)] leading-tight">See it from the air.</h2>
             </div>
-            <p className="text-zinc-500 lg:pb-1.5">A 30-second drone pass over the house and the ridge it sits on — the way the macaws see it.</p>
+            <p className="text-zinc-500 lg:pb-1.5">A 30-second drone pass over the house and the ridge it sits on.</p>
           </Reveal>
           <Reveal delay={80}><PropertyTour /></Reveal>
         </div>
@@ -145,11 +145,11 @@ export default function BirdHousePage() {
             <img src={photos[4]} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-r from-[#0b241c]/95 via-[#0b241c]/80 to-[#0b241c]/40" />
             <div className="relative z-10 max-w-[620px]">
-              <span className="font-mono text-[12px] uppercase tracking-[0.28em] text-[#eaa519]">Guided visits · Relocation</span>
-              <h2 className="mt-3 font-display text-[clamp(28px,5vw,52px)] leading-none">Come fly it in person.</h2>
-              <p className="my-5 max-w-[46ch] text-lg text-white/85">I live in these hills. Tell me when you&apos;re thinking of coming and I&apos;ll plan the visit around The Bird House — the drive, the neighbours, the land in context. If it becomes home, I run the relocation side too.</p>
+              <span className="font-mono text-[12px] uppercase tracking-[0.28em] text-[#eaa519]">Free video call · Free on-site visit</span>
+              <h2 className="mt-3 font-display text-[clamp(28px,5vw,52px)] leading-none">Come see it in person.</h2>
+              <p className="my-5 max-w-[46ch] text-lg text-white/85">I live in these hills. Start with a free video call — English, French, Polish or Spanish. When you come, the visit is free: I&apos;ll show you the water, the boundaries, the trees, and talk through what&apos;s buildable. Fair price, no pressure.</p>
               <div className="flex flex-wrap gap-3">
-                <a href="mailto:hello@costaplanner.com?subject=The%20Bird%20House%20—%20guided%20visit" className="inline-flex items-center gap-2 rounded-full bg-[#e23a2e] px-6 py-3 text-sm font-semibold text-white transition hover:brightness-110">Enquire about The Bird House</a>
+                <a href="mailto:hello@costaplanner.com?subject=The%20Bird%20House%20—%20free%20visit" className="inline-flex items-center gap-2 rounded-full bg-[#e23a2e] px-6 py-3 text-sm font-semibold text-white transition hover:brightness-110">Book a free visit</a>
                 <Link href="/" className="inline-flex items-center gap-2 rounded-full border border-white/50 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10">Back to all properties</Link>
               </div>
             </div>

@@ -46,16 +46,16 @@ export default function EstatesNav() {
           </Link>
 
           <div className={`hidden items-center gap-8 text-sm md:flex ${light ? "text-white/90" : "text-zinc-700"}`}>
-            <Link href="/bird-house" className="transition hover:opacity-70">The Bird House</Link>
-            <Link href="/#visit" className="transition hover:opacity-70">Guided visits</Link>
-            <Link href="/#edge" className="transition hover:opacity-70">Why buy with me</Link>
+            <Link href="/#idea" className="transition hover:opacity-70">The idea</Link>
+            <Link href="/#portfolio" className="transition hover:opacity-70">Properties</Link>
+            <Link href="/#why" className="transition hover:opacity-70">Why me</Link>
           </div>
 
           <a
-            href="mailto:hello@costaplanner.com?subject=Costa%20Planner%20Estates%20enquiry"
+            href="mailto:hello@costaplanner.com?subject=Costa%20Planner%20Estates%20—%20free%20call"
             className="inline-flex items-center gap-2 rounded-full bg-[#e23a2e] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_10px_26px_-12px_#e23a2e] transition hover:brightness-110"
           >
-            Enquire
+            Book a free call
           </a>
         </div>
       </nav>

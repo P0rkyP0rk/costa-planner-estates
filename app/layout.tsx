@@ -5,15 +5,15 @@ import EstatesFooter from "@/app/components/EstatesFooter";
 
 export const metadata: Metadata = {
   title: {
-    default: "Costa Planner Estates — Costa Rica property, shown from the air",
+    default: "Costa Planner Estates — Private Costa Rica Land, Water & Freedom",
     template: "%s | Costa Planner Estates",
   },
   description:
-    "Costa Rica land and homes presented by someone who lives here. Follow the macaws down over the finca, then take the aerial drone tour. Guided property visits and expat relocation support.",
+    "Private Costa Rica property with its own water, fruit trees, and wildlife — much of it along biological corridors and protected forest. Fair deals, shown in person by Kevin: engineer, multilingual, free calls and visits.",
   openGraph: {
-    title: "Costa Planner Estates — Costa Rica property, shown from the air",
+    title: "Costa Planner Estates — Private Costa Rica Land, Water & Freedom",
     description:
-      "Costa Rica land and homes, shown by someone who lives here. Aerial drone tours, guided visits, relocation support.",
+      "Private Costa Rica land with its own water, trees, and wildlife. Fair deals, shown in person. Free video calls and on-site visits.",
     type: "website",
     siteName: "Costa Planner Estates",
   },
