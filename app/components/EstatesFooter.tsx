@@ -17,17 +17,17 @@ export default function EstatesFooter() {
               </span>
             </div>
             <p className="mt-4 text-[15px] text-[#9fb3a3]">
-              The property arm of Costa Planner. Kevin Piórkowski — engineer, French-Polish, living on a finca in Puriscal. Private Costa Rica land with its own water, trees, and wildlife. Fair deals, shown in person.
+              Property in the Puriscal highlands of Costa Rica. Kevin Piórkowski — engineer, French-Polish, living in the region. A small, hand-picked list of land and homes, shown in person. Fair deals, free visits.
             </p>
           </div>
 
           <div className="flex flex-wrap gap-[clamp(34px,6vw,72px)]">
             <div>
               <h4 className="mb-3.5 font-mono text-[11px] uppercase tracking-[0.2em] text-[#7f978a]">Explore</h4>
+              <Link href="/#region" className="mb-2.5 block text-[15px] text-[#cfdccf] transition hover:text-white">The region</Link>
+              <Link href="/#listings" className="mb-2.5 block text-[15px] text-[#cfdccf] transition hover:text-white">Listings</Link>
               <Link href="/bird-house" className="mb-2.5 block text-[15px] text-[#cfdccf] transition hover:text-white">The Bird House</Link>
-              <Link href="/#portfolio" className="mb-2.5 block text-[15px] text-[#cfdccf] transition hover:text-white">All properties</Link>
-              <Link href="/#idea" className="mb-2.5 block text-[15px] text-[#cfdccf] transition hover:text-white">The idea</Link>
-              <Link href="/#call" className="mb-2.5 block text-[15px] text-[#cfdccf] transition hover:text-white">Free calls &amp; visits</Link>
+              <Link href="/#about" className="mb-2.5 block text-[15px] text-[#cfdccf] transition hover:text-white">About</Link>
             </div>
             <div>
               <h4 className="mb-3.5 font-mono text-[11px] uppercase tracking-[0.2em] text-[#7f978a]">Reach me</h4>

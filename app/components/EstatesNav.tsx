@@ -46,9 +46,9 @@ export default function EstatesNav() {
           </Link>
 
           <div className={`hidden items-center gap-8 text-sm md:flex ${light ? "text-white/90" : "text-zinc-700"}`}>
-            <Link href="/#idea" className="transition hover:opacity-70">The idea</Link>
-            <Link href="/#portfolio" className="transition hover:opacity-70">Properties</Link>
-            <Link href="/#why" className="transition hover:opacity-70">Why me</Link>
+            <Link href="/#region" className="transition hover:opacity-70">The region</Link>
+            <Link href="/#listings" className="transition hover:opacity-70">Listings</Link>
+            <Link href="/#about" className="transition hover:opacity-70">About</Link>
           </div>
 
           <a

@@ -5,15 +5,15 @@ import EstatesFooter from "@/app/components/EstatesFooter";
 
 export const metadata: Metadata = {
   title: {
-    default: "Costa Planner Estates — Private Costa Rica Land, Water & Freedom",
+    default: "Costa Planner Estates — Property in the Puriscal Highlands, Costa Rica",
     template: "%s | Costa Planner Estates",
   },
   description:
-    "Private Costa Rica property with its own water, fruit trees, and wildlife — much of it along biological corridors and protected forest. Fair deals, shown in person by Kevin: engineer, multilingual, free calls and visits.",
+    "A small, hand-picked list of land and homes in the Puriscal region of central Costa Rica — cool highland climate, clean water, forest and fair prices, an hour from San José. Shown in person by Kevin: engineer, multilingual, free calls and visits.",
   openGraph: {
-    title: "Costa Planner Estates — Private Costa Rica Land, Water & Freedom",
+    title: "Costa Planner Estates — Property in the Puriscal Highlands, Costa Rica",
     description:
-      "Private Costa Rica land with its own water, trees, and wildlife. Fair deals, shown in person. Free video calls and on-site visits.",
+      "Land and homes in the Puriscal highlands of Costa Rica — water, forest, fair prices, an hour from San José. Shown in person. Free calls and visits.",
     type: "website",
     siteName: "Costa Planner Estates",
   },
