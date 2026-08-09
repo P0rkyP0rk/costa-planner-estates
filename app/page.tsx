@@ -143,9 +143,16 @@ export default function HomePage() {
       {/* 02 — About / the agent */}
       <section id="about" className="border-y border-zinc-200 bg-stone-50 py-[clamp(72px,10vw,140px)]">
         <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-[clamp(30px,5vw,72px)] px-[clamp(20px,5vw,52px)] lg:grid-cols-[0.9fr_1.1fr]">
-          <Reveal className="relative order-2 aspect-[4/5] overflow-hidden rounded-[18px] border border-zinc-200 shadow-[0_22px_60px_-28px_rgba(24,33,27,.35)] lg:order-1">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/estates/bird-house-02.jpg" alt="A terrace on one of the Puriscal properties, mountains beyond" className="h-full w-full object-cover" />
+          <Reveal className="relative order-2 lg:order-1">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[18px] border border-zinc-200 shadow-[0_22px_60px_-28px_rgba(24,33,27,.35)]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/estates/kevin-beach.jpg" alt="Kevin Piórkowski walking the surf on a Costa Rica beach" className="h-full w-full object-cover" />
+            </div>
+            {/* playful inset — Kevin & the macaw */}
+            <div className="absolute -bottom-5 -right-3 w-[38%] max-w-[158px] rotate-[3deg] overflow-hidden rounded-2xl border-[5px] border-stone-50 shadow-[0_16px_40px_-16px_rgba(24,33,27,.5)]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/estates/kevin-macaw.jpg" alt="Kevin with a scarlet macaw mural in Puriscal" className="aspect-square w-full object-cover" />
+            </div>
           </Reveal>
           <Reveal delay={100} className="order-1 lg:order-2">
             <SectionTag n="02">Your agent</SectionTag>
