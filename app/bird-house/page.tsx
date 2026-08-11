@@ -12,16 +12,16 @@ const HERO = photos[0];
 // Placeholder figures pending the real listing details.
 const listing = {
   name: "The Bird House",
-  location: "Puriscal · Central Pacific · Own water · Ocean & forest",
+  location: "RonRon · South of Puriscal · Pacific view",
   status: "Reduced",
-  price: "$395,000",
+  price: "$82,000",
   specs: [
-    { n: "Own water", l: "Spring-fed" },
-    { n: "Fruit trees", l: "At the door" },
     { n: "2 bed", l: "+ 2 bath" },
-    { n: "Ocean + forest", l: "In every window" },
-    { n: "Turnkey", l: "Running Airbnb" },
-    { n: "1.2 ha", l: "Titled" },
+    { n: "2 units", l: "Live in or rent out" },
+    { n: "~130 m²", l: "+ covered pool area" },
+    { n: "422 m²", l: "lot · +1.2 ac optional" },
+    { n: "Ocean view", l: "Manuel Antonio → Hermosa" },
+    { n: "Airbnb", l: "5 yrs · Superhost" },
   ],
 };
 
@@ -29,10 +29,12 @@ const schema = [
   {
     "@context": "https://schema.org",
     "@type": "SingleFamilyResidence",
-    name: "The Bird House — glass house with ocean view, Puriscal, Costa Rica",
+    name: "The Bird House — ocean-view glass house, RonRon, Puriscal, Costa Rica",
     description:
-      "A private red steel-framed glass house on a ridge in the Puriscal region of Costa Rica — its own spring-fed water, fruit trees at the door, ocean and forest views, along the biological corridors near protected forest. Open-plan living, indoor jacuzzi, hammock terraces, and a running Airbnb. Shown in person, with a free video call and a free on-site visit.",
+      "A two-storey glass house on a mountaintop in the RonRon community south of Puriscal, Costa Rica — panoramic Pacific ocean views, two independent units, a covered pool area, and a fruit-and-herb garden, in the ecological corridor between the Carrara and La Cangreja reserves. A five-year Superhost Airbnb. Reduced to US$82,000.",
     numberOfRooms: 2,
+    floorSize: { "@type": "QuantitativeValue", value: 130, unitCode: "MTK" },
+    offers: { "@type": "Offer", price: "82000", priceCurrency: "USD", availability: "https://schema.org/InStock" },
     amenityFeature: [
       { "@type": "LocationFeatureSpecification", name: "Ocean view", value: true },
       { "@type": "LocationFeatureSpecification", name: "Indoor jacuzzi", value: true },
@@ -43,9 +45,9 @@ const schema = [
 ];
 
 export const metadata: Metadata = {
-  title: "The Bird House — Glass House with Ocean View, Puriscal",
+  title: "The Bird House — Ocean-View Home in RonRon, Puriscal",
   description:
-    "A private glass house on a Puriscal ridge — its own spring-fed water, fruit trees, ocean and forest views, near protected forest. Indoor jacuzzi, running Airbnb. See the drone tour, browse the gallery, and book a free visit.",
+    "A two-storey glass house in the RonRon community south of Puriscal — Pacific ocean view, two independent units, a covered pool, fruit garden, and a five-year Superhost Airbnb. Reduced to $82,000. See the drone tour, browse the gallery, and book a free visit.",
 };
 
 export default function BirdHousePage() {
@@ -97,11 +99,11 @@ export default function BirdHousePage() {
         <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-[clamp(28px,5vw,64px)] px-[clamp(20px,5vw,52px)] lg:grid-cols-[1fr_360px] lg:items-start">
           <Reveal>
             <span className="font-mono text-[12px] uppercase tracking-[0.28em] text-zinc-500">The house</span>
-            <h2 className="mt-3 max-w-[18ch] text-balance font-display text-[clamp(28px,4.4vw,50px)] leading-[1.05]">A glass house that lives in the canopy.</h2>
+            <h2 className="mt-3 max-w-[20ch] text-balance font-display text-[clamp(28px,4.4vw,50px)] leading-[1.05]">A glass house, open to the Pacific.</h2>
             <div className="mt-6 max-w-[62ch] space-y-4 text-lg text-zinc-600">
-              <p>The name fits. It&apos;s a red steel frame filled almost entirely with glass, high on a private Puriscal ridge — so from the inside you&apos;re level with the birds, ocean on one horizon and forest on the other. The walls slide open and the outside comes in.</p>
-              <p>It has its own spring-fed water and fruit trees at the door — mango, citrus, banana within reach. Toucans and a hundred other birds move through, because the ridge sits along the corridors that feed the protected forest nearby. Open-plan living, a spiral stair, an indoor jacuzzi, a hammock terrace. It already earns as an Airbnb, so keep hosting — or empty it out and keep the quiet.</p>
-              <p>I&apos;ve walked every metre of it. As an engineer I can tell you exactly what&apos;s here and what&apos;s possible — the water, the access, what a second build would take. Come see it on a free visit, in whatever language suits you.</p>
+              <p>A two-storey glass house on a mountaintop in RonRon, a small private community south of Puriscal — its glass fronts wide open to the Pacific, from Manuel Antonio round to Playa Hermosa. It sits in the ecological corridor between the Carrara and La Cangreja reserves, and after twenty years of planting for the birds, the garden is never quiet.</p>
+              <p>It lives as one home or two independent units. Downstairs, a 40 m² apartment with a queen bed, kitchen and bath behind a full panoramic window; upstairs, a 90 m² main floor with a king-bed master, kitchen, bath and balcony. There&apos;s a covered pool area with a whirlpool bathhouse going in, fruit trees and herbs all around, hot water and gas on demand, and — being on a summit — genuinely good internet and phone signal.</p>
+              <p>It has earned a steady Airbnb income for five years, Superhost since the fourth, and I can keep that running for you if you&apos;re not here. The 422 m² lot can grow: the neighbour&apos;s 1.2-acre parcel is available alongside it for a full 360° view. I&apos;ve walked every metre — as an engineer I&apos;ll tell you straight about the access, the seasons and what more you could build. Come see it on a free visit, in whatever language suits you.</p>
             </div>
           </Reveal>
           <Reveal delay={100} className="overflow-hidden rounded-2xl border border-zinc-200 shadow-[0_22px_60px_-28px_rgba(24,33,27,.35)]">

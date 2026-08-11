@@ -3,7 +3,8 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import EstatesHero from "@/app/components/EstatesHero";
 import Reveal from "@/app/components/Reveal";
-import { ListingScene, type SceneKey } from "@/app/components/scenes";
+import { ListingScene } from "@/app/components/scenes";
+import { listings } from "@/app/lib/listings";
 
 const regionStats: { n: string; l: string }[] = [
   { n: "1–1.5 h", l: "to San José & the airport" },
@@ -27,29 +28,6 @@ const pillars: { icon: ReactNode; h: string; p: string }[] = [
   { icon: <><path d="M12 21v-8" /><path d="M12 13c0-3-2-5-5-5 0 3 2 5 5 5z" /><path d="M12 15c0-3 2-5 5-5 0 3-2 5-5 5z" /></>, h: "Room to give back", p: "Cleared pasture replants easily. If you want, your land can join a reforestation project — no obligation, just an option that's there." },
 ];
 
-const listings: {
-  name: string; loc: string; tag: string; hot: boolean; desc: string;
-  meta: string[]; price: string; href: string; cta: string; img?: string; scene?: SceneKey; flagship?: boolean;
-}[] = [
-  { name: "The Bird House", loc: "Santiago de Puriscal", tag: "Turnkey home", hot: true, flagship: true,
-    desc: "A red-framed glass house on a private ridge — its own spring-fed water, fruit trees at the door, ocean and forest in every window. It already earns as an Airbnb. Move in, keep hosting, or keep the quiet for yourself.",
-    meta: ["Own water", "2 bed · 2 bath", "1.2 ha", "Ocean & forest view"], price: "$395,000", href: "/bird-house", cta: "View listing", img: "/images/estates/bird-house-01.jpg" },
-  { name: "Río Grifo Alto", loc: "Grifo Alto · Puriscal", tag: "Own river", hot: false,
-    desc: "A slope of coffee and gallery forest with its own year-round river, twenty minutes from town.",
-    meta: ["2.5 ha", "River", "Coffee"], price: "$185,000", href: "#contact", cta: "Ask about this", scene: "river" },
-  { name: "Mirador Turrubares", loc: "Alto de Turrubares · Puriscal", tag: "Ocean-view lot", hot: true,
-    desc: "A titled ridge lot with a long view to the Pacific and forest at your back. Private, and ready to build on.",
-    meta: ["0.8 ha", "Ocean view", "Titled"], price: "$110,000", href: "#contact", cta: "Ask about this", scene: "ocean" },
-  { name: "Finca Barbacoas", loc: "Barbacoas · Puriscal", tag: "Reforestation-ready", hot: false,
-    desc: "Six hectares of pasture and gallery forest with its own creek and cleared ground that wants trees again.",
-    meta: ["6 ha", "Creek", "Off-grid"], price: "$240,000", href: "#contact", cta: "Ask about this", scene: "volcano" },
-  { name: "Bosque Mastatal", loc: "Mastatal · Puriscal", tag: "Against the reserve", hot: false,
-    desc: "Cloud-forest land right against La Cangreja, thick with birds. For someone who came for the wildlife.",
-    meta: ["3 ha", "Cloud forest", "Birding"], price: "$165,000", href: "#contact", cta: "Ask about this", scene: "cloud" },
-  { name: "Casa Santiago", loc: "Santiago de Puriscal · Village", tag: "Move-in", hot: false,
-    desc: "A restored three-bed a walk from the square, with fruit trees and its own well. Easy to live in from day one.",
-    meta: ["3 bed", "Own well", "In town"], price: "$168,000", href: "#contact", cta: "Ask about this", scene: "coffee" },
-];
 
 const schema = [
   {
@@ -143,9 +121,16 @@ export default function HomePage() {
       {/* 02 — About / the agent */}
       <section id="about" className="border-y border-zinc-200 bg-stone-50 py-[clamp(72px,10vw,140px)]">
         <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-[clamp(30px,5vw,72px)] px-[clamp(20px,5vw,52px)] lg:grid-cols-[0.9fr_1.1fr]">
-          <Reveal className="relative order-2 aspect-[4/5] overflow-hidden rounded-[18px] border border-zinc-200 shadow-[0_22px_60px_-28px_rgba(24,33,27,.35)] lg:order-1">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/estates/bird-house-02.jpg" alt="A terrace on one of the Puriscal properties, mountains beyond" className="h-full w-full object-cover" />
+          <Reveal className="relative order-2 lg:order-1">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[18px] border border-zinc-200 shadow-[0_22px_60px_-28px_rgba(24,33,27,.35)]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/estates/kevin-beach.jpg" alt="Kevin Piórkowski walking the surf on a Costa Rica beach" className="h-full w-full object-cover" />
+            </div>
+            {/* playful inset — Kevin & the macaw */}
+            <div className="absolute -bottom-5 -right-3 w-[38%] max-w-[158px] rotate-[3deg] overflow-hidden rounded-2xl border-[5px] border-stone-50 shadow-[0_16px_40px_-16px_rgba(24,33,27,.5)]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/estates/kevin-macaw.jpg" alt="Kevin with a scarlet macaw mural in Puriscal" className="aspect-square w-full object-cover" />
+            </div>
           </Reveal>
           <Reveal delay={100} className="order-1 lg:order-2">
             <SectionTag n="02">Your agent</SectionTag>
