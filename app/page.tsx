@@ -3,7 +3,8 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import EstatesHero from "@/app/components/EstatesHero";
 import Reveal from "@/app/components/Reveal";
-import { ListingScene, type SceneKey } from "@/app/components/scenes";
+import { ListingScene } from "@/app/components/scenes";
+import { listings } from "@/app/lib/listings";
 
 const regionStats: { n: string; l: string }[] = [
   { n: "1–1.5 h", l: "to San José & the airport" },
@@ -27,29 +28,6 @@ const pillars: { icon: ReactNode; h: string; p: string }[] = [
   { icon: <><path d="M12 21v-8" /><path d="M12 13c0-3-2-5-5-5 0 3 2 5 5 5z" /><path d="M12 15c0-3 2-5 5-5 0 3-2 5-5 5z" /></>, h: "Room to give back", p: "Cleared pasture replants easily. If you want, your land can join a reforestation project — no obligation, just an option that's there." },
 ];
 
-const listings: {
-  name: string; loc: string; tag: string; hot: boolean; desc: string;
-  meta: string[]; price: string; href: string; cta: string; img?: string; scene?: SceneKey; flagship?: boolean;
-}[] = [
-  { name: "The Bird House", loc: "RonRon · South of Puriscal", tag: "Turnkey Airbnb", hot: true, flagship: true,
-    desc: "A two-storey glass house on a mountaintop in the RonRon community, wide open to a Pacific view from Manuel Antonio to Playa Hermosa. Two independent units, a covered pool area, and a fruit-and-herb garden alive with birds, between the Carrara and Cangreja reserves. A Superhost Airbnb for five years.",
-    meta: ["2 bed · 2 bath", "2 units · ~130 m²", "422 m² lot", "Ocean view"], price: "$82,000", href: "/bird-house", cta: "View listing", img: "/images/estates/bird-house-01.jpg" },
-  { name: "Río Grifo Alto", loc: "Grifo Alto · Puriscal", tag: "Own river", hot: false,
-    desc: "A slope of coffee and gallery forest with its own year-round river, twenty minutes from town.",
-    meta: ["2.5 ha", "River", "Coffee"], price: "$185,000", href: "#contact", cta: "Ask about this", scene: "river" },
-  { name: "Mirador Turrubares", loc: "Alto de Turrubares · Puriscal", tag: "Ocean-view lot", hot: true,
-    desc: "A titled ridge lot with a long view to the Pacific and forest at your back. Private, and ready to build on.",
-    meta: ["0.8 ha", "Ocean view", "Titled"], price: "$110,000", href: "#contact", cta: "Ask about this", scene: "ocean" },
-  { name: "Finca Barbacoas", loc: "Barbacoas · Puriscal", tag: "Reforestation-ready", hot: false,
-    desc: "Six hectares of pasture and gallery forest with its own creek and cleared ground that wants trees again.",
-    meta: ["6 ha", "Creek", "Off-grid"], price: "$240,000", href: "#contact", cta: "Ask about this", scene: "volcano" },
-  { name: "Bosque Mastatal", loc: "Mastatal · Puriscal", tag: "Against the reserve", hot: false,
-    desc: "Cloud-forest land right against La Cangreja, thick with birds. For someone who came for the wildlife.",
-    meta: ["3 ha", "Cloud forest", "Birding"], price: "$165,000", href: "#contact", cta: "Ask about this", scene: "cloud" },
-  { name: "Casa Santiago", loc: "Santiago de Puriscal · Village", tag: "Move-in", hot: false,
-    desc: "A restored three-bed a walk from the square, with fruit trees and its own well. Easy to live in from day one.",
-    meta: ["3 bed", "Own well", "In town"], price: "$168,000", href: "#contact", cta: "Ask about this", scene: "coffee" },
-];
 
 const schema = [
   {
