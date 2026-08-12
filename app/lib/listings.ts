@@ -54,6 +54,7 @@ export const listings: Listing[] = [
     status: "New",
     desc: "Six and a half hectares on its own summit near La Cangreja National Park, two hours from San José. Open pasture and forest, potable spring water already pumped to the top, electricity on site, and a near-360° view all the way to the ocean.",
     meta: ["6.3 ha", "Own water", "Near-360° view"],
+    img: "/images/estates/flanc.jpeg",
     scene: "volcano",
     href: "/listings/finca-krispin",
     cta: "View listing",
@@ -74,9 +75,15 @@ export const listings: Listing[] = [
     ],
     videos: [
       { src: "/video/krispin-summit.mp4", label: "From the summit" },
-      { src: "/video/krispin-jungle.mp4", label: "The water source" },
+      { src: "/video/krispin-jungle.mp4", label: "The spring water" },
+      { src: "/video/krispin-satellite.mp4", label: "Where it sits" },
     ],
-    gallery: [],
+    gallery: [
+      "/images/estates/ocean.jpeg",
+      "/images/estates/cascade.jpeg",
+      "/images/estates/flanc.jpeg",
+      "/images/estates/cuvette.jpeg",
+    ],
   },
   {
     slug: "rio-grifo-alto",

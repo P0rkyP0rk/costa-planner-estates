@@ -117,7 +117,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
             <Reveal className="mb-8 max-w-[640px]">
               <span className="font-mono text-[12px] uppercase tracking-[0.28em] text-zinc-500">On the land</span>
               <h2 className="mt-3 font-display text-[clamp(28px,4.4vw,48px)] leading-tight">Take a look around.</h2>
-              <p className="mt-4 text-lg text-zinc-500">A couple of clips from the day I walked it — the summit view and the water.</p>
+              <p className="mt-4 text-lg text-zinc-500">A few clips from the day I walked it — the view from the summit, the spring, and how it sits on the mountain.</p>
             </Reveal>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               {l.videos.map((v) => (
