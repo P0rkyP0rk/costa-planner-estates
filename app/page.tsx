@@ -15,7 +15,7 @@ const regionStats: { n: string; l: string }[] = [
 
 const regionPoints: { h: string; p: string }[] = [
   { h: "Close to what you need", p: "San José's hospitals, flights and city are about an hour away. You get the quiet without cutting yourself off from anything." },
-  { h: "A climate you'll enjoy", p: "Up around a thousand metres, Puriscal skips the coastal heat — warm days, cool nights, green the whole year round." },
+  { h: "A climate you'll enjoy", p: "Up around a thousand metres, these hills skip the coastal heat — warm days, cool nights, green the whole year round." },
   { h: "Value the coast forgot", p: "Land and homes here go for a fraction of Guanacaste, with more space, more water, and more forest for the money." },
 ];
 
@@ -93,7 +93,7 @@ export default function HomePage() {
             </Reveal>
             <Reveal delay={80}>
               <p className="text-lg leading-relaxed text-zinc-600">
-                For years the money went to the coast — the heat, the crowds, the beach-town prices. Puriscal is the other Costa Rica: green mountains an hour from the capital, mild climate, real water, and land that still costs what land should. A working canton of coffee and small towns, with forest running up to the national park. The people buying here now are the ones who did their homework.
+                For years the money went to the coast — the heat, the crowds, the beach-town prices. The Puriscal highlands are the other Costa Rica: green mountains an hour from the capital, mild climate, real water, and land that still costs what land should. A working canton of coffee and small towns, with forest running up to the national park. The people buying here now are the ones who did their homework.
               </p>
             </Reveal>
           </div>

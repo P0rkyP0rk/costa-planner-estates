@@ -19,13 +19,13 @@ export default function EstatesHero() {
       <div className="relative z-10 mx-auto w-full max-w-[1240px] px-[clamp(20px,5vw,52px)] pb-[clamp(48px,9vh,110px)]">
         <span className="inline-flex items-center gap-2 font-mono text-[12px] uppercase tracking-[0.3em] text-white/80">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 21s7-6.3 7-12a7 7 0 1 0-14 0c0 5.7 7 12 7 12z" /><circle cx="12" cy="9" r="2.4" /></svg>
-          Puriscal · Costa Rica
+          Puriscal Highlands · Costa Rica
         </span>
         <h1 className="mt-5 font-display text-[clamp(42px,7.4vw,94px)] font-medium leading-[0.98] text-white [text-shadow:0_2px_30px_rgba(0,0,0,.4)]">
-          Land in the hills,<br /><span className="italic text-[#ff7a68]">an hour from the capital.</span>
+          Make the<br /><span className="italic text-[#ff7a68]">lasting choice.</span>
         </h1>
         <p className="mt-7 max-w-[56ch] text-[clamp(17px,2vw,21px)] leading-relaxed text-white/90 [text-shadow:0_1px_14px_rgba(0,0,0,.5)]">
-          Puriscal is the green highland heart of central Costa Rica — cooler air, clean water, coffee farms, and forest still full of birds. Close to San José, far from the resort crowd, and priced the way the country used to be. I sell a small, hand-picked set of it, and I show you around myself.
+          The Puriscal highlands are the green, high middle of Costa Rica — cooler air, running water, coffee slopes, and forest the birds never left. An hour from San José, a world from the resort coast, and still priced the way the country was before the crowds arrived. I keep the list short and hand-picked, and I show you around myself.
         </p>
         <div className="mt-9 flex flex-wrap gap-3">
           <Link href="#listings" className="inline-flex items-center gap-2 rounded-full bg-[#e23a2e] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_14px_34px_-12px_#e23a2e] transition hover:brightness-110">
